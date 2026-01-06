@@ -1,0 +1,9 @@
+{
+	"name": "anshlamdeprojadf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4d9d1c66-e129-4427-be3b-c53f8e1caccd",
+		"tenantId": "80c649eb-2a8c-4034-a7e1-5f99a3e482d6"
+	}
+}
