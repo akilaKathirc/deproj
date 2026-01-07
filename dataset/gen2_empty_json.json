@@ -1,8 +1,8 @@
 {
-	"name": "cdc_json",
+	"name": "gen2_empty_json",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "gen2_cdc_dynamic_json",
+			"referenceName": "gen2_empty_json",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
@@ -26,7 +26,7 @@
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@concat(dataset().folder, '_cdc')",
+					"value": "@dataset().folder",
 					"type": "Expression"
 				},
 				"fileSystem": {
@@ -35,14 +35,6 @@
 				}
 			}
 		},
-		"schema": {
-			"type": "object",
-			"properties": {
-				"cdc": {
-					"type": "string"
-				}
-			}
-		}
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+		"schema": {}
+	}
 }
