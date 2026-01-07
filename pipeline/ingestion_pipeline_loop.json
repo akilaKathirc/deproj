@@ -372,7 +372,7 @@
 		"parameters": {
 			"container": {
 				"type": "string",
-				"defaultValue": "bronzeh"
+				"defaultValue": "bronze"
 			},
 			"loop_input": {
 				"type": "array",
