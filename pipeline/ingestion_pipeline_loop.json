@@ -342,7 +342,9 @@
 						"activity": "for_all_table",
 						"dependencyConditions": [
 							"Skipped",
-							"Failed"
+							"Failed",
+							"Succeeded",
+							"Completed"
 						]
 					}
 				],
@@ -356,9 +358,12 @@
 				"userProperties": [],
 				"typeProperties": {
 					"method": "POST",
-					"url": "https://prod-01.northcentralus.logic.azure.com:443/workflows/ea31da1324914cbd84df94b22f08a760/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=LoU9tyWQKqaaQwXh2cO9LmBuw0q5rGaDSszuFRa6-Qw",
+					"url": {
+						"value": "https://prod-15.northcentralus.logic.azure.com:443/workflows/98627d071b0b41e2ba5e4d6d5448e746/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=Y_ipqLtZfZxrp5vIzdFqDrAz70yU_WOMTrfQ5UWdYVc",
+						"type": "Expression"
+					},
 					"body": {
-						"value": "{\n\"pipeline_name\":@{pipeline().Pipeline},\n\"pipeline_id\":@{pipeline().RunId}\n}",
+						"value": "{\n\"pipeline_name\":\"@{pipeline().Pipeline}\",\n\"pipeline_id\":\"@{pipeline().RunId}\"\n}",
 						"type": "Expression"
 					}
 				}
@@ -367,7 +372,7 @@
 		"parameters": {
 			"container": {
 				"type": "string",
-				"defaultValue": "bronze"
+				"defaultValue": "bronzeh"
 			},
 			"loop_input": {
 				"type": "array",
