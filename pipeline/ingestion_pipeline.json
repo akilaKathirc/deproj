@@ -44,13 +44,13 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "last_cdc",
+						"activity": "utc_now",
 						"dependencyConditions": [
 							"Succeeded"
 						]
 					},
 					{
-						"activity": "utc_now",
+						"activity": "last_cdc",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -104,8 +104,16 @@
 						"referenceName": "gen_dynamic_parquet",
 						"type": "DatasetReference",
 						"parameters": {
-							"table": {
+							"container": {
+								"value": "@pipeline().parameters.container",
+								"type": "Expression"
+							},
+							"folder": {
 								"value": "@pipeline().parameters.table",
+								"type": "Expression"
+							},
+							"file": {
+								"value": "@concat(pipeline().parameters.table,'_',variables('utc_now'))",
 								"type": "Expression"
 							}
 						}
@@ -145,6 +153,10 @@
 			},
 			"copy_from_date": {
 				"type": "string"
+			},
+			"container": {
+				"type": "string",
+				"defaultValue": "bronze"
 			}
 		},
 		"variables": {
