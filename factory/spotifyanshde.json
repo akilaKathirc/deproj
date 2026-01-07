@@ -1,0 +1,9 @@
+{
+	"name": "spotifyanshde",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5364d3be-9bf5-4dde-81ad-8989fe1e1784",
+		"tenantId": "80c649eb-2a8c-4034-a7e1-5f99a3e482d6"
+	}
+}
