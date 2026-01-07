@@ -12,6 +12,7 @@
 						"value": "@pipeline().parameters.loop_input",
 						"type": "Expression"
 					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "last_cdc",
@@ -346,7 +347,7 @@
 						"schema": "dbo",
 						"table": "DimUser",
 						"cdc_col": "updated_at",
-						"copy_from_date": ""
+						"copy_from_date": "2025-09-24"
 					},
 					{
 						"schema": "dbo",
